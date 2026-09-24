@@ -5,7 +5,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
-from app.traning.traning_utils import DATA_FILE_PATH, MODEL_PATH, MODEL_DIR
+from traning.traning_utils import DATA_FILE_PATH, MODEL_PATH, MODEL_DIR
 import pandas as pd
 import os
 import joblib
