@@ -9,3 +9,4 @@ services:
    envVars:
    - key: MODEL_PATH
      value: app/models/model.joblib
+  

@@ -7,7 +7,7 @@ load_dotenv()
 
 REDIS_URL= os.getenv("REDIS_URL")
 
-redis_client = redis.StrickRedis.from_url(REDIS_URL)
+redis_client = redis.Redis.from_url(REDIS_URL,decode_responses=True)
 
 def get_cache_prediction(key:str):
     value = redis_client.get(key)
