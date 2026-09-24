@@ -2,8 +2,12 @@ import redis
 import os  
 import json
 from app.core.config import settings
+from dotenv import load_dotenv
+load_dotenv()
 
-redis_client = redis.Redis.from_url(settings.REDIS_URL)
+REDIS_URL= os.getenv("REDIS_URL")
+
+redis_client = redis.StrickRedis.from_url(REDIS_URL)
 
 def get_cache_prediction(key:str):
     value = redis_client.get(key)
